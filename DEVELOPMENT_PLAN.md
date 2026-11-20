@@ -1,6 +1,6 @@
 # ShikshaSaathi — Development Plan
 
-> Status: **APPROVED 2026-11-20** (all recommendations D1–D11 accepted). Phases 1–3 complete — awaiting review before Phase 4.
+> Status: **APPROVED 2026-11-20** (all recommendations D1–D11 accepted). Phases 1–4 complete — awaiting review before Phase 5.
 
 Each phase ends with: `npx tsc --noEmit` ✅ · `npx expo lint` ✅ · unit tests ✅ · the phase's manual checklist on a real Android phone ✅ · a short explanation of what was built and why.
 
@@ -70,6 +70,8 @@ Each phase ends with: `npx tsc --noEmit` ✅ · `npx expo lint` ✅ · unit test
 - Prepare screen: collapsible sections (overview, objectives, prerequisites, duration, materials, introduction, step-by-step, examples, demonstrations, questions to ask, misconceptions, alternative methods, remedial).
 - Teacher notes per section, bookmarks, "Mark as taught" → teaching log, Recent on Home.
 - **Test:** long content scrolls smoothly; notes persist; airplane mode works.
+- **Notes:** objectives/prerequisites stay on the Topic Hub (not repeated in Prepare). Added a Safety section. Closed sections don't render their content (keeps long plans fast on low-end phones). "Mark as taught" has class choice, Today/Yesterday/typed date (future dates refused), First teaching/Revision (auto-suggested when the class was already taught). Saved topics appear on Home. Teach stack now anchored on Home (`unstable_settings.anchor`) so screens opened directly still have a sensible back button.
+- **Outcome:** tsc ✅ · lint ✅ · 110 Jest tests ✅ (dates, teaching log with class names, full Prepare/notes/bookmark/mark-taught flows) · Android bundle export ✅ · manual device checklist ⏳.
 
 ## Phase 5 — Visual Teaching Studio
 - Install `react-native-svg`, `expo-speech`, `expo-audio`, `expo-video`, `expo-screen-orientation` (+ keep-awake after verification).

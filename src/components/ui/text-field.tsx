@@ -20,10 +20,23 @@ export type TextFieldProps = {
   keyboardType?: KeyboardTypeOptions;
   maxLength?: number;
   autoFocus?: boolean;
+  /** Several lines of text (e.g. notes). The box grows from about 4 lines tall. */
+  multiline?: boolean;
   testID?: string;
 };
 
-export function TextField({ label, value, onChangeText, hint, error, keyboardType, maxLength, autoFocus, testID }: TextFieldProps) {
+export function TextField({
+  label,
+  value,
+  onChangeText,
+  hint,
+  error,
+  keyboardType,
+  maxLength,
+  autoFocus,
+  multiline = false,
+  testID,
+}: TextFieldProps) {
   const [focused, setFocused] = useState(false);
   const devanagari = containsDevanagari(value);
 
@@ -39,6 +52,8 @@ export function TextField({ label, value, onChangeText, hint, error, keyboardTyp
         keyboardType={keyboardType}
         maxLength={maxLength}
         autoFocus={autoFocus}
+        multiline={multiline}
+        textAlignVertical={multiline ? 'top' : 'center'}
         accessibilityLabel={label}
         accessibilityHint={error ?? hint}
         maxFontSizeMultiplier={1.6}
@@ -50,6 +65,7 @@ export function TextField({ label, value, onChangeText, hint, error, keyboardTyp
             borderColor: error ? Colors.danger : focused ? Colors.primary : Colors.lineStrong,
             borderWidth: focused || error ? 2 : 1,
           },
+          multiline && styles.multiline,
         ]}
       />
       {error ? (
@@ -77,5 +93,9 @@ const styles = StyleSheet.create({
     paddingVertical: Spacing.sm,
     fontSize: Typography.body.fontSize,
     color: Colors.ink,
+  },
+  multiline: {
+    minHeight: 112,
+    paddingTop: Spacing.md,
   },
 });

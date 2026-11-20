@@ -4,8 +4,8 @@ import { StyleSheet, View } from 'react-native';
 
 import { ListRow, Screen, Section, Text } from '@/components/ui';
 import { Colors, Spacing } from '@/constants/theme';
-import { loadContent, useLocalize } from '@/content';
-import { recent, useDbQuery, type Database } from '@/db';
+import { loadContent, useLocalize, type TopicMeta } from '@/content';
+import { bookmarks, recent, useDbQuery, type Database } from '@/db';
 import { ContentErrorScreen, subjectStyle, SubjectCard, TopicStatusBadge } from '@/features/browse';
 import { useT } from '@/i18n';
 
@@ -19,40 +19,52 @@ export default function TeachHomeScreen() {
   const L = useLocalize();
   const router = useRouter();
   const content = loadContent();
-  const loadRecent = useCallback((db: Database) => recent.listRecent(db, 'topic', 3), []);
-  const recentTopics = useDbQuery(loadRecent);
+  const loadTeacherLists = useCallback(
+    async (db: Database) => ({
+      recent: (await recent.listRecent(db, 'topic', 3)).map((r) => r.targetId),
+      saved: await bookmarks.listBookmarks(db, 'topic'),
+    }),
+    [],
+  );
+  const teacherLists = useDbQuery(loadTeacherLists);
 
   if (!content.ok) return <ContentErrorScreen error={content.error} />;
   const { store } = content;
 
   const openTopic = (topicId: string) => router.push({ pathname: '/topic/[topicId]', params: { topicId } });
   // Skip any remembered topic that no longer exists in the content (e.g. removed in an update).
-  const continueItems = (recentTopics.data ?? []).flatMap((item) => {
-    const topic = store.getTopic(item.targetId);
-    return topic ? [topic.meta] : [];
-  });
+  const toMetas = (ids: string[]) =>
+    ids.flatMap((id) => {
+      const topic = store.getTopic(id);
+      return topic ? [topic.meta] : [];
+    });
+  const continueItems = toMetas(teacherLists.data?.recent ?? []);
+  const savedItems = toMetas(teacherLists.data?.saved ?? []);
+
+  const topicRow = (meta: TopicMeta, testPrefix: string) => {
+    const style = subjectStyle(meta.subjectId);
+    return (
+      <ListRow
+        key={meta.id}
+        icon={style.icon}
+        iconColor={style.main}
+        iconBackground={style.soft}
+        title={L(meta.title)}
+        subtitle={L(store.getSubject(meta.subjectId)!.title)}
+        trailing={<TopicStatusBadge meta={meta} />}
+        onPress={() => openTopic(meta.id)}
+        testID={`${testPrefix}-${meta.id}`}
+      />
+    );
+  };
 
   return (
     <Screen title={t('teach.greeting')} subtitle={t('teach.subtitle')} testID="teach-home">
       {continueItems.length > 0 && (
-        <Section title={t('teach.continue')}>
-          {continueItems.map((meta) => {
-            const style = subjectStyle(meta.subjectId);
-            return (
-              <ListRow
-                key={meta.id}
-                icon={style.icon}
-                iconColor={style.main}
-                iconBackground={style.soft}
-                title={L(meta.title)}
-                subtitle={L(store.getSubject(meta.subjectId)!.title)}
-                trailing={<TopicStatusBadge meta={meta} />}
-                onPress={() => openTopic(meta.id)}
-                testID={`continue-${meta.id}`}
-              />
-            );
-          })}
-        </Section>
+        <Section title={t('teach.continue')}>{continueItems.map((meta) => topicRow(meta, 'continue'))}</Section>
+      )}
+      {savedItems.length > 0 && (
+        <Section title={t('teach.saved')}>{savedItems.map((meta) => topicRow(meta, 'saved'))}</Section>
       )}
 
       <Text variant="caption" weight="semibold" color={Colors.inkMuted} style={styles.heading} accessibilityRole="header">

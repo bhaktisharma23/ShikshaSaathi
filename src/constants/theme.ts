@@ -48,6 +48,11 @@ export const Colors = {
 
   /** Used for disabled controls. */
   disabled: '#CFC7BC',
+
+  /** "On the board" boxes look like a blackboard, so teachers instantly see what to write. Contrast ≈ 10:1. */
+  chalkboard: '#2B4237',
+  chalkboardFrame: '#6B4F35',
+  chalk: '#F4F1E8',
 } as const;
 
 /** Each subject has one identity colour used for chips and icons only — never large backgrounds. */

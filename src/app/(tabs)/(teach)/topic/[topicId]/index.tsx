@@ -1,19 +1,22 @@
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
-import { useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { useCallback, useEffect } from 'react';
+import { Alert, StyleSheet, View } from 'react-native';
 
-import { Badge, Card, EmptyState, Icon, ListRow, Screen, Section, Text } from '@/components/ui';
+import { Badge, Button, Card, EmptyState, Icon, IconButton, ListRow, Screen, Section, Text } from '@/components/ui';
 import { Colors, Spacing } from '@/constants/theme';
 import { loadContent, useLocalize } from '@/content';
 import { countMissingHindi } from '@/content/validate';
-import { recent, useDatabase } from '@/db';
+import { bookmarks, recent, teachingLog, useDatabase, useDbQuery, type Database } from '@/db';
+import type { TeachingLogEntry } from '@/db/repositories/teaching-log';
+import { formatDisplayDate } from '@/domain/dates';
 import { ContentErrorScreen, subjectStyle, TopicStatusBadge } from '@/features/browse';
 import { useLanguage, useT } from '@/i18n';
 
 /**
  * Topic Hub: everything about one topic in one place.
- * Tool rows become tappable as their screens are built (Prepare: Phase 4, Visuals: 5,
+ * Tool rows become tappable as their screens are built (Prepare: done; Visuals: Phase 5,
  * Activities: 6, Assess: 7). Counts shown are real counts from the content files.
+ * Also: Mark as taught, Save (bookmark), and the teaching record for this topic.
  */
 export default function TopicHubScreen() {
   const { topicId } = useLocalSearchParams<{ topicId: string }>();
@@ -31,6 +34,16 @@ export default function TopicHubScreen() {
     if (!exists) return;
     recent.recordOpened(db, 'topic', topicId).catch((e) => console.warn('[recent] not saved', e));
   }, [db, topicId, exists]);
+
+  // Teacher's own data for this topic; reloads when returning from "Mark as taught".
+  const loadTeacherData = useCallback(
+    async (database: Database) => ({
+      bookmarked: await bookmarks.isBookmarked(database, 'topic', topicId),
+      log: await teachingLog.listTeachingLog(database, topicId),
+    }),
+    [topicId],
+  );
+  const teacherData = useDbQuery(loadTeacherData);
 
   if (!content.ok) return <ContentErrorScreen error={content.error} topInset={false} />;
 
@@ -52,6 +65,27 @@ export default function TopicHubScreen() {
   const isSample = meta.isSample || meta.status !== 'published';
   const showEnglishOnly = language === 'hi' && countMissingHindi(topic) > 0;
   const comingSoon = <Badge label={t('common.comingSoon')} />;
+  const bookmarked = teacherData.data?.bookmarked ?? false;
+  const log = teacherData.data?.log ?? [];
+  const statusLabel = { taught: t('taught.status.taught'), revisited: t('taught.status.revisited'), planned: t('taught.status.planned') };
+
+  const toggleBookmark = async () => {
+    await bookmarks.toggleBookmark(db, 'topic', meta.id);
+    await teacherData.reload();
+  };
+
+  const confirmDeleteLog = (entry: TeachingLogEntry) =>
+    Alert.alert(t('taught.delete.title'), undefined, [
+      { text: t('common.cancel'), style: 'cancel' },
+      {
+        text: t('common.delete'),
+        style: 'destructive',
+        onPress: async () => {
+          await teachingLog.deleteTeachingLog(db, entry.id);
+          await teacherData.reload();
+        },
+      },
+    ]);
 
   return (
     <>
@@ -67,6 +101,22 @@ export default function TopicHubScreen() {
             </Text>
           </View>
           <Text>{L(meta.summary)}</Text>
+        </View>
+
+        <View style={styles.actions}>
+          <Button
+            label={t('taught.mark')}
+            icon="event_available"
+            onPress={() => router.push({ pathname: '/topic/[topicId]/mark-taught', params: { topicId: meta.id } })}
+            testID="mark-taught-button"
+          />
+          <Button
+            label={bookmarked ? t('bookmark.remove') : t('bookmark.add')}
+            icon={bookmarked ? 'bookmark_added' : 'bookmark_border'}
+            variant="secondary"
+            onPress={toggleBookmark}
+            testID="bookmark-button"
+          />
         </View>
 
         {isSample && (
@@ -105,7 +155,8 @@ export default function TopicHubScreen() {
                   })
                 : t('topic.tool.notAuthored')
             }
-            trailing={comingSoon}
+            onPress={() => router.push({ pathname: '/topic/[topicId]/prepare', params: { topicId: meta.id } })}
+            testID="open-prepare"
           />
           <ListRow
             icon="slideshow"
@@ -138,6 +189,33 @@ export default function TopicHubScreen() {
             }
             trailing={comingSoon}
           />
+        </Section>
+
+        <Section title={t('taught.history')}>
+          {log.length === 0 ? (
+            <View style={styles.listItem}>
+              <Text color={Colors.inkMuted}>{t('taught.none')}</Text>
+            </View>
+          ) : (
+            log.map((entry) => (
+              <ListRow
+                key={entry.id}
+                icon={entry.status === 'revisited' ? 'replay' : 'event_available'}
+                title={entry.classroomName ?? t('taught.general')}
+                subtitle={[
+                  statusLabel[entry.status],
+                  entry.taughtOn ? formatDisplayDate(entry.taughtOn, language) : null,
+                  entry.notes,
+                ]
+                  .filter(Boolean)
+                  .join(' · ')}
+                trailing={
+                  <IconButton icon="delete" accessibilityLabel={t('taught.delete')} onPress={() => confirmDeleteLog(entry)} />
+                }
+                testID="teaching-log-entry"
+              />
+            ))
+          )}
         </Section>
 
         <Section title={t('topic.objectives')}>
@@ -174,6 +252,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Spacing.xs,
+  },
+  actions: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: Spacing.sm,
   },
   notice: {
     backgroundColor: Colors.accentSoft,

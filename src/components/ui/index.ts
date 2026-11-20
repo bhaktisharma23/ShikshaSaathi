@@ -1,6 +1,7 @@
 export { Badge, type BadgeProps, type BadgeTone } from './badge';
 export { Button, type ButtonProps, type ButtonSize, type ButtonVariant } from './button';
 export { Card, type CardProps } from './card';
+export { Collapsible, type CollapsibleProps } from './collapsible';
 export { Icon, type IconName, type IconProps } from './icon';
 export { IconButton, type IconButtonProps } from './icon-button';
 export { ListRow, type ListRowProps } from './list-row';

@@ -99,8 +99,26 @@ describe('teaching log', () => {
     const klass = await classrooms.createClassroom(db, { name: '6-A', studentCount: 30, academicYear: '2026-27' });
     await teachingLog.logTeaching(db, { topicId: 'sci-magnets', status: 'taught', classroomId: klass.id, taughtOn: '2026-11-18' });
     expect(await teachingLog.listTeachingLog(db, 'sci-magnets')).toEqual([
-      expect.objectContaining({ classroomId: klass.id, status: 'taught', taughtOn: '2026-11-18' }),
+      expect.objectContaining({ classroomId: klass.id, classroomName: '6-A', status: 'taught', taughtOn: '2026-11-18' }),
     ]);
+    expect(await teachingLog.hasBeenTaught(db, 'sci-magnets', klass.id)).toBe(true);
+    expect(await teachingLog.hasBeenTaught(db, 'other-topic', klass.id)).toBe(false);
+  });
+
+  it('keeps the class name after the class is deleted, newest first, and deletes entries', async () => {
+    const klass = await classrooms.createClassroom(db, { name: '6-B', studentCount: 30, academicYear: '2026-27' });
+    const first = await teachingLog.logTeaching(db, { topicId: 't', status: 'taught', classroomId: klass.id, taughtOn: '2026-11-01' });
+    await teachingLog.logTeaching(db, { topicId: 't', status: 'revisited', classroomId: klass.id, taughtOn: '2026-11-15' });
+    await classrooms.deleteClassroom(db, klass.id);
+
+    const log = await teachingLog.listTeachingLog(db, 't');
+    expect(log.map((e) => [e.status, e.classroomName])).toEqual([
+      ['revisited', '6-B'],
+      ['taught', '6-B'],
+    ]);
+
+    await teachingLog.deleteTeachingLog(db, first);
+    expect(await teachingLog.listTeachingLog(db, 't')).toHaveLength(1);
   });
 
   it('rejects a log entry for a class that does not exist', async () => {

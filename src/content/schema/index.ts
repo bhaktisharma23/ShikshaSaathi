@@ -11,6 +11,9 @@
  * Cross-file rules (e.g. "every objectiveId must exist") live in ../validate.ts.
  * Scene (Phase 5) and activity (Phase 6) schemas are added in their phases.
  */
+/* eslint-disable @typescript-eslint/no-redeclare --
+ * Intentional zod pattern: each schema (a value) and the type inferred from it share one name,
+ * e.g. `TopicMeta.parse(x)` returns a `TopicMeta`. TypeScript keeps values and types separate. */
 import { z } from 'zod';
 
 // ---------- shared ----------

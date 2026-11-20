@@ -15,9 +15,39 @@ export const en = {
 
   'teach.greeting': 'Namaste',
   'teach.subtitle': 'What will you teach today?',
-  'teach.empty.title': 'Lessons are being prepared',
-  'teach.empty.message':
-    'Class 6 topics will appear here once their content has been written and checked against the curriculum.',
+  'teach.subjects': 'Class 6 subjects',
+
+  'subject.topicCount.one': '1 topic',
+  'subject.topicCount.other': '{count} topics',
+  'subject.inPreparation': 'In preparation',
+  'subject.empty.title': 'Topics are being prepared',
+  'subject.empty.message':
+    'Topics for this subject will appear here after their content is written and checked against the curriculum.',
+  'subject.notFound.title': 'Subject not found',
+  'subject.notFound.message': 'This subject is not available in the app.',
+
+  'topic.duration': '{minutes} min · {periods} periods',
+  'topic.sample': 'Sample',
+  'topic.verified': 'Verified',
+  'topic.sampleNotice.title': 'Sample content — not yet verified',
+  'topic.sampleNotice.message':
+    'This topic has not yet been checked against the current CBSE/NCERT curriculum. Use it as a draft and check facts before teaching.',
+  'topic.englishOnly': 'Lesson content for this topic is in English only for now.',
+  'topic.objectives': 'Learning objectives',
+  'topic.prerequisites': 'Students should already know',
+  'topic.tools': 'Teaching tools',
+  'topic.tool.prepare': 'Prepare the lesson',
+  'topic.tool.prepare.detail': '{steps} teaching steps · {materials} materials',
+  'topic.tool.visuals': 'Teach visually',
+  'topic.tool.activities': 'Classroom activities',
+  'topic.tool.assess': 'Assess students',
+  'topic.tool.assess.detail': '{assessments} assessments · {questions} questions',
+  'topic.tool.notAuthored': 'Not written yet for this topic',
+  'topic.notFound.title': 'Topic not found',
+  'topic.notFound.message': 'This topic may have been removed or renamed.',
+
+  'content.error.title': 'Lesson content could not be loaded',
+  'content.error.message': 'Some lesson content is damaged. Please update or reinstall the app.',
 
   'classes.title': 'Your classes',
   'classes.empty.title': 'No classes added yet',
@@ -48,6 +78,8 @@ export const en = {
   'common.loading': 'Loading…',
   'common.errorTitle': 'Something went wrong',
   'common.sample': 'Sample',
+  'common.comingSoon': 'Coming soon',
+  'common.goBack': 'Go back',
 
   'language.en': 'English',
   'language.hi': 'हिन्दी',

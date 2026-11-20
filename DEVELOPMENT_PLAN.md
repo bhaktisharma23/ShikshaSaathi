@@ -1,6 +1,6 @@
 # ShikshaSaathi — Development Plan
 
-> Status: **APPROVED 2026-11-20** (all recommendations D1–D11 accepted). Phase 1 complete — awaiting review before Phase 2.
+> Status: **APPROVED 2026-11-20** (all recommendations D1–D11 accepted). Phases 1–2 complete — awaiting review before Phase 3.
 
 Each phase ends with: `npx tsc --noEmit` ✅ · `npx expo lint` ✅ · unit tests ✅ · the phase's manual checklist on a real Android phone ✅ · a short explanation of what was built and why.
 
@@ -48,6 +48,8 @@ Each phase ends with: `npx tsc --noEmit` ✅ · `npx expo lint` ✅ · unit test
 - Screens: Home (subjects), Subject (topic list + verification badge), Topic Hub.
 - Other 9 topics appear as "Content in preparation" (honest empty state), not fake data.
 - **Test:** validation script catches deliberately broken files; Home → Subject → Topic in 2 taps.
+- **Changes from plan:** validation runs as a Jest test (`npm run validate-content`) instead of a separate `scripts/validate-content.ts`, so it shares the app's path aliases and needs no extra tooling. The other 9 topics are *not* listed by name (their names are unverified); subjects without content show "In preparation" instead. Topic Hub tool rows show real content counts and a "Coming soon" badge until their screens are built.
+- **Outcome:** tsc ✅ · lint ✅ · 48 Jest tests ✅ (content validation, broken-content detection, 2-tap navigation) · Android bundle export ✅ · `sci-magnets`: 0 validation errors, 1 draft warning (Hindi translations pending) · manual device checklist ⏳.
 
 ## Phase 3 — Database & classes
 - Install `expo-sqlite`, `expo-file-system`.

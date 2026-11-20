@@ -1,6 +1,6 @@
 # ShikshaSaathi — Development Plan
 
-> Status: **PROPOSED — awaiting approval.** Nothing below Phase 0 starts until the architecture is approved.
+> Status: **APPROVED 2026-11-20** (all recommendations D1–D11 accepted). Phase 1 complete — awaiting review before Phase 2.
 
 Each phase ends with: `npx tsc --noEmit` ✅ · `npx expo lint` ✅ · unit tests ✅ · the phase's manual checklist on a real Android phone ✅ · a short explanation of what was built and why.
 
@@ -38,6 +38,8 @@ Each phase ends with: `npx tsc --noEmit` ✅ · `npx expo lint` ✅ · unit test
 - Navigation skeleton: 4 tabs + stacks + classroom routes, each showing a proper empty state (no fake content).
 - Test setup: `jest-expo`, React Native Testing Library.
 - **Test:** every tab and back button works; text scaling at 130 %; Hindi labels render; tests run.
+- **Change from plan:** `expo-sqlite` was installed in Phase 1 (not 3) so the language choice is saved with its key-value store. The database tables still arrive in Phase 3.
+- **Outcome:** tsc ✅ · lint ✅ · 30 Jest tests ✅ (incl. router navigation test) · expo-doctor 20/20 ✅ · Android bundle export ✅ · manual device checklist ⏳ (needs your phone).
 
 ## Phase 2 — Content system + reference topic
 - Install `zod`. Write schemas in `src/content/schema/` → TypeScript types inferred from them.

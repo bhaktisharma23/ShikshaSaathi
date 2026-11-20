@@ -77,7 +77,7 @@ export function ClassForm({ initial, onSubmit }: ClassFormProps) {
         onChangeText={setName}
         error={errors.name}
         maxLength={CLASSROOM_LIMITS.nameMax + 5}
-        autoFocus={!initial}
+        // No autoFocus: an open keyboard would hide the other fields and the Save button on small phones.
         testID="class-name"
       />
       <TextField

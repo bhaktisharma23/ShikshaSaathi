@@ -78,7 +78,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: Spacing.md,
     paddingHorizontal: Spacing.xl,
-    paddingVertical: Spacing.xxxl,
+    // Kept compact so the message (and any action) fits on small phones above the tab bar.
+    paddingVertical: Spacing.xl,
   },
   iconCircle: {
     width: 72,

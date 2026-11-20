@@ -16,20 +16,17 @@ export default function ClassesScreen() {
 
   return (
     <Screen title={t('classes.title')} testID="classes-home">
+      {/* Always at the top, so it is visible on small phones without scrolling
+          (an empty state's button can end up hidden behind the tab bar). */}
+      <Button label={t('classes.add')} icon="add" size="lg" fullWidth onPress={addClass} testID="add-class" />
       {error && !data ? (
         <ErrorState message={t('db.error.message')} onRetry={reload} />
       ) : !data ? (
         <LoadingState />
       ) : data.length === 0 ? (
-        <EmptyState
-          icon="groups"
-          title={t('classes.empty.title')}
-          message={t('classes.empty.message')}
-          action={{ label: t('classes.add'), icon: 'add', onPress: addClass }}
-        />
+        <EmptyState icon="groups" title={t('classes.empty.title')} message={t('classes.empty.message')} />
       ) : (
         <>
-          <Button label={t('classes.add')} icon="add" variant="secondary" onPress={addClass} testID="add-class" />
           <Section>
             {data.map((klass) => (
               <ListRow

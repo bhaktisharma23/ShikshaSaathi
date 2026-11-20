@@ -18,6 +18,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 
 import { Colors } from '@/constants/theme';
+import { DatabaseProvider } from '@/db';
 import { LanguageProvider } from '@/i18n';
 
 SplashScreen.preventAutoHideAsync();
@@ -65,15 +66,18 @@ export default function RootLayout() {
     <ThemeProvider value={navigationTheme}>
       <LanguageProvider>
         <StatusBar style="dark" />
-        <Stack
-          screenOptions={{
-            headerShown: false,
-            // Android: the app is portrait; classroom presentation routes will opt into landscape (Phase 5).
-            orientation: 'portrait',
-            contentStyle: { backgroundColor: Colors.paper },
-          }}>
-          <Stack.Screen name="(tabs)" />
-        </Stack>
+        {/* Opens the on-device database and runs migrations before any screen appears. */}
+        <DatabaseProvider>
+          <Stack
+            screenOptions={{
+              headerShown: false,
+              // Android: the app is portrait; classroom presentation routes will opt into landscape (Phase 5).
+              orientation: 'portrait',
+              contentStyle: { backgroundColor: Colors.paper },
+            }}>
+            <Stack.Screen name="(tabs)" />
+          </Stack>
+        </DatabaseProvider>
       </LanguageProvider>
     </ThemeProvider>
   );

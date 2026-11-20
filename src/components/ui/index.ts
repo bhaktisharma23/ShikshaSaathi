@@ -10,3 +10,4 @@ export { Segmented, type SegmentedOption, type SegmentedProps } from './segmente
 export { EmptyState, ErrorState, LoadingState, type EmptyStateProps, type ErrorStateProps } from './states';
 export { clamp, Stepper, type StepperProps } from './stepper';
 export { containsDevanagari, Text, type TextProps } from './text';
+export { TextField, type TextFieldProps } from './text-field';

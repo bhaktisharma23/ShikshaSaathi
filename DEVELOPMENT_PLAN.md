@@ -1,6 +1,6 @@
 # ShikshaSaathi — Development Plan
 
-> Status: **APPROVED 2026-11-20** (all recommendations D1–D11 accepted). Phases 1–2 complete — awaiting review before Phase 3.
+> Status: **APPROVED 2026-11-20** (all recommendations D1–D11 accepted). Phases 1–3 complete — awaiting review before Phase 4.
 
 Each phase ends with: `npx tsc --noEmit` ✅ · `npx expo lint` ✅ · unit tests ✅ · the phase's manual checklist on a real Android phone ✅ · a short explanation of what was built and why.
 
@@ -58,6 +58,13 @@ Each phase ends with: `npx tsc --noEmit` ✅ · `npx expo lint` ✅ · unit test
 - Classes tab: list, add/edit, delete (with undo); kv-store settings.
 - Dev-only self-test screen.
 - **Test:** fresh install creates DB; kill app and reopen → data persists; migration runs once only.
+- **Changes from plan:**
+  - `expo-file-system` and the media repository are deferred to Phase 5, when real media first exists (no unused dependency).
+  - Added `expo-crypto` for UUIDs.
+  - Our own `DatabaseProvider` (calling `openDatabaseAsync`) instead of `<SQLiteProvider>`, so repositories depend on a 5-method `Database` interface that Jest backs with Node's built-in SQLite — tests run the real SQL, constraints and migrations.
+  - Delete uses a confirmation dialog instead of an undo banner; deletion is soft, so data stays recoverable (`restoreClassroom`).
+  - Bonus: Home now shows "Continue where you left off" (recent topics), which uses the new database immediately.
+- **Outcome:** tsc ✅ · lint ✅ · 91 Jest tests ✅ (migrations incl. upgrade/rollback/newer-DB refusal, DB constraints, all repositories, full Classes flow) · expo-doctor 20/20 ✅ · Android bundle export ✅ · on-device self-test screen added (More → Developer) · manual device checklist ⏳.
 
 ## Phase 4 — Teacher Preparation Centre
 - Prepare screen: collapsible sections (overview, objectives, prerequisites, duration, materials, introduction, step-by-step, examples, demonstrations, questions to ask, misconceptions, alternative methods, remedial).

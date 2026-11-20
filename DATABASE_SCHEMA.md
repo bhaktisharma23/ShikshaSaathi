@@ -1,7 +1,7 @@
 # ShikshaSaathi — Local Database Schema (SQLite)
 
-> Status: **PROPOSED — awaiting approval.**
-> Engine: `expo-sqlite` (SDK 58), accessed through `<SQLiteProvider>` + `useSQLiteContext()`.
+> Status: **IMPLEMENTED in Phase 3** (migration `001-initial`).
+> Engine: `expo-sqlite` (SDK 58), opened by our `DatabaseProvider` (`src/db/provider.tsx`) and accessed with `useDatabase()` / `useDbQuery()`. Repositories in `src/db/repositories/` depend only on the small `Database` interface in `src/db/types.ts`.
 
 ---
 

@@ -1,10 +1,12 @@
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
+import { useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 
 import { Badge, Card, EmptyState, Icon, ListRow, Screen, Section, Text } from '@/components/ui';
 import { Colors, Spacing } from '@/constants/theme';
 import { loadContent, useLocalize } from '@/content';
 import { countMissingHindi } from '@/content/validate';
+import { recent, useDatabase } from '@/db';
 import { ContentErrorScreen, subjectStyle, TopicStatusBadge } from '@/features/browse';
 import { useLanguage, useT } from '@/i18n';
 
@@ -19,11 +21,19 @@ export default function TopicHubScreen() {
   const L = useLocalize();
   const { language } = useLanguage();
   const router = useRouter();
+  const db = useDatabase();
   const content = loadContent();
+  const topic = content.ok ? content.store.getTopic(topicId) : undefined;
+  const exists = topic !== undefined;
+
+  // Remember this topic for "Continue where you left off" on Home.
+  useEffect(() => {
+    if (!exists) return;
+    recent.recordOpened(db, 'topic', topicId).catch((e) => console.warn('[recent] not saved', e));
+  }, [db, topicId, exists]);
 
   if (!content.ok) return <ContentErrorScreen error={content.error} topInset={false} />;
 
-  const topic = content.store.getTopic(topicId);
   if (!topic) {
     return (
       <Screen topInset={false}>

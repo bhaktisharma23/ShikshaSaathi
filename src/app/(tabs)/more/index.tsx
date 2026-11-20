@@ -52,6 +52,15 @@ export default function MoreScreen() {
             onPress={() => router.push('/more/ui-kit')}
             testID="open-ui-kit"
           />
+          <ListRow
+            icon="database"
+            iconColor={Colors.accentInk}
+            iconBackground={Colors.accentSoft}
+            title={t('more.dbSelfTest')}
+            subtitle={t('more.dbSelfTestHint')}
+            onPress={() => router.push('/more/db-self-test')}
+            testID="open-db-self-test"
+          />
         </Section>
       )}
     </Screen>

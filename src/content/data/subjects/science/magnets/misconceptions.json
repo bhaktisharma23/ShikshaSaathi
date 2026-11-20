@@ -1,0 +1,86 @@
+[
+  {
+    "id": "sci-magnets-mc1",
+    "statement": { "en": "“A magnet attracts all metals.”" },
+    "whyStudentsThinkThis": {
+      "en": "Most things they have seen stick to a magnet are shiny metal objects such as pins, nails and clips, so they connect “metal” with “magnetic”."
+    },
+    "howToSpot": {
+      "en": "Ask students to predict whether aluminium foil, a copper wire or a brass key will stick. Students with this idea will say yes to all of them."
+    },
+    "howToCorrect": {
+      "en": "Let them test aluminium foil and copper wire themselves. Write on the board: “Magnets attract iron (and a few other materials such as nickel and cobalt). Many metals, like aluminium and copper, are NOT attracted.”"
+    },
+    "objectiveIds": ["sci-magnets-lo1"]
+  },
+  {
+    "id": "sci-magnets-mc2",
+    "statement": { "en": "“A bigger magnet is always a stronger magnet.”" },
+    "whyStudentsThinkThis": {
+      "en": "In daily life, bigger usually means stronger (a bigger person can lift more), so they expect the same of magnets."
+    },
+    "howToSpot": {
+      "en": "Show a small and a large magnet and ask which will lift more paper clips. Students with this idea always choose the larger one without testing."
+    },
+    "howToCorrect": {
+      "en": "Count how many paper clips each magnet can lift in a chain. Strength depends on what the magnet is made of and how it was made, not only on its size. The only fair way to compare is to test."
+    },
+    "objectiveIds": ["sci-magnets-lo2"]
+  },
+  {
+    "id": "sci-magnets-mc3",
+    "statement": { "en": "“Every part of a magnet attracts equally” or “the middle is strongest”." },
+    "whyStudentsThinkThis": {
+      "en": "The magnet looks the same all along its length, and the middle seems like the “centre” of its power."
+    },
+    "howToSpot": {
+      "en": "Ask: “If I roll this bar magnet in pins, where will most pins stick?” Students with this idea say “everywhere” or “in the middle”."
+    },
+    "howToCorrect": {
+      "en": "Roll the bar magnet in pins or iron particles from sand. Hold it up: almost everything clusters at the two ends and very little sticks in the middle. Name the ends “poles”."
+    },
+    "objectiveIds": ["sci-magnets-lo2"]
+  },
+  {
+    "id": "sci-magnets-mc4",
+    "statement": { "en": "“A magnet must touch an object to pull it.”" },
+    "whyStudentsThinkThis": {
+      "en": "Most pushes and pulls they experience need contact, like pushing a door or pulling a rope."
+    },
+    "howToSpot": {
+      "en": "Ask whether a magnet can move a paper clip that is on the other side of a notebook page, or inside a glass of water."
+    },
+    "howToCorrect": {
+      "en": "Do the “magic paper clip” demonstration: move a magnet under a notebook and watch the clip move on top. Then lift a clip out of a glass of water using a magnet held outside the glass. Magnetic force acts from a distance and through paper, glass, cloth and water."
+    },
+    "objectiveIds": ["sci-magnets-lo1"]
+  },
+  {
+    "id": "sci-magnets-mc5",
+    "statement": { "en": "“If you break a magnet, one piece gets the north pole and the other gets the south pole.”" },
+    "whyStudentsThinkThis": {
+      "en": "They picture the poles as two separate “parts” stuck on the ends, so cutting in the middle should separate them."
+    },
+    "howToSpot": {
+      "en": "Ask: “I break a bar magnet into two halves. How many poles does each half have?” Students with this idea answer “one”."
+    },
+    "howToCorrect": {
+      "en": "Magnetise a long needle, then carefully cut it in half with pliers (teacher only). Hang each half or bring each end near a compass: every piece has both a north and a south pole. A magnet always has two poles."
+    },
+    "objectiveIds": ["sci-magnets-lo2"]
+  },
+  {
+    "id": "sci-magnets-mc6",
+    "statement": { "en": "“If something is attracted by a magnet, it must be a magnet itself.”" },
+    "whyStudentsThinkThis": {
+      "en": "Two magnets attract each other, and a magnet and an iron nail also attract, so the two situations look the same."
+    },
+    "howToSpot": {
+      "en": "Give two identical-looking iron bars, one magnetised. Ask how to find the magnet using another magnet. Students with this idea suggest “see which one it attracts”."
+    },
+    "howToCorrect": {
+      "en": "Show that a plain iron nail is attracted by BOTH poles of a magnet. Only another magnet can be pushed away (repelled). Repulsion is the sure test for a magnet."
+    },
+    "objectiveIds": ["sci-magnets-lo3"]
+  }
+]

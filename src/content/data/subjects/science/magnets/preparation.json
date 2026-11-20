@@ -1,0 +1,403 @@
+{
+  "overview": {
+    "en": "Over three periods, students discover magnets by doing, not by listening. Period 1: they predict and test which things a magnet attracts and find where a magnet is strongest. Period 2: they hang a magnet to find north, and explore attraction and repulsion between poles. Period 3: they make their own needle compass, test whether magnetism passes through materials, and learn how to look after magnets. Work in groups of 5–6 so everyone touches the materials."
+  },
+  "materials": [
+    {
+      "name": { "en": "Bar magnets" },
+      "quantity": "1 per group (2 for the teacher)",
+      "lowCostAlternative": {
+        "en": "Magnets from the school science kit, a broken loudspeaker, or toy magnets. Avoid flat flexible fridge magnets for pole experiments — they have many poles in stripes."
+      }
+    },
+    {
+      "name": { "en": "Test objects: iron nails, steel paper clips, safety pins, aluminium foil, copper wire, a brass key or lock, pencil, eraser, plastic ruler, glass bangle, paper, cloth" },
+      "quantity": "1 small set per group",
+      "lowCostAlternative": {
+        "en": "Ask students to bring 5 small objects from home a day earlier (nothing sharp or valuable)."
+      }
+    },
+    {
+      "name": { "en": "Pins or iron particles" },
+      "quantity": "1 handful",
+      "lowCostAlternative": {
+        "en": "Drag a magnet (wrapped in a thin plastic bag) through dry sand or soil — black iron particles stick to it. Peel off the bag to collect them."
+      }
+    },
+    {
+      "name": { "en": "Thread and a stand to hang the magnet" },
+      "quantity": "1 metre thread per group",
+      "lowCostAlternative": { "en": "Tie the thread to a wooden stool turned upside down, or a stick across two chairs." }
+    },
+    {
+      "name": { "en": "Sewing needles (for the needle compass)" },
+      "quantity": "1 per group",
+      "lowCostAlternative": { "en": "A steel pin or a straightened steel paper clip." }
+    },
+    {
+      "name": { "en": "Shallow bowl of water, small piece of cork or leaf" },
+      "quantity": "1 per group",
+      "lowCostAlternative": {
+        "en": "A plastic plate with a little water, and a flat leaf or a slice of thermocol from packaging. Do not use a steel bowl."
+      }
+    },
+    {
+      "name": { "en": "A glass or plastic tumbler" },
+      "quantity": "1 for the teacher",
+      "lowCostAlternative": { "en": "Any clear plastic bottle cut in half." }
+    },
+    {
+      "name": { "en": "Magnetic compass (optional)" },
+      "quantity": "1 for the teacher",
+      "lowCostAlternative": { "en": "The needle compass that students make in Period 3." }
+    }
+  ],
+  "introduction": {
+    "hook": {
+      "en": "“Magic” paper clip: a paper clip moves across the top of a notebook while your hand stays hidden underneath."
+    },
+    "script": {
+      "en": "Before class, place a paper clip on a notebook and hold a magnet under the page. Tell the class: “Watch — I can move this clip without touching it.” Move the magnet slowly so the clip “walks” across the page. Ask: “How did I do it? Is it magic?” Take 3–4 guesses without saying who is right. Then show the magnet and say: “Today we become scientists and find out what this small object can and cannot do.”"
+    },
+    "durationMinutes": 5
+  },
+  "teachingSteps": [
+    {
+      "order": 1,
+      "period": 1,
+      "title": { "en": "Predict: which things will stick?" },
+      "durationMinutes": 10,
+      "teacherDoes": {
+        "en": "Draw a 3-column table on the board: Object | Our prediction | Result. Hold up each test object one at a time and ask groups to predict “Yes” or “No”. Write predictions in the table with a show of hands (e.g. Yes 30, No 8). Do not correct any prediction yet."
+      },
+      "studentsDo": {
+        "en": "Discuss in groups and raise hands for “Yes” or “No”. Copy the table in their notebooks."
+      },
+      "sayThis": {
+        "en": "“Scientists first guess, then test. A wrong guess is not a mistake — it is how we learn. Let us see how many of our guesses come true.”"
+      },
+      "boardWork": {
+        "en": "Table: Object | Prediction (Yes/No) | Result. Rows: iron nail, paper clip, safety pin, aluminium foil, copper wire, brass key, pencil, eraser, plastic ruler, glass bangle, paper, cloth."
+      },
+      "objectiveIds": ["sci-magnets-lo1"]
+    },
+    {
+      "order": 2,
+      "period": 1,
+      "title": { "en": "Test in groups and find the pattern" },
+      "durationMinutes": 15,
+      "teacherDoes": {
+        "en": "Give each group a magnet and a set of objects. Walk around and make sure every student gets a turn. After 8 minutes, fill the “Result” column with the class. Circle the surprises (usually aluminium foil, copper wire and brass). Ask: “Are all metals attracted?” Guide them to the rule: magnets attract iron and things containing iron (and a few other materials like nickel and cobalt), but not all metals."
+      },
+      "studentsDo": {
+        "en": "Touch the magnet to each object and sort them into two piles: “attracted” and “not attracted”. Record results and compare with predictions."
+      },
+      "sayThis": {
+        "en": "“Aluminium and copper are metals, but the magnet does not pull them. So we cannot say ‘magnets attract all metals’. What can we say instead?”"
+      },
+      "boardWork": {
+        "en": "Magnetic materials: iron, nickel, cobalt (and things made from them). Non-magnetic: wood, plastic, paper, glass, rubber, aluminium, copper, brass."
+      },
+      "checkForUnderstanding": {
+        "en": "Hold up a new object (e.g. a steel tiffin lid or a coin) and ask: “How can we be sure whether it is magnetic?” Expected: “Test it with the magnet.” (Different steel items and coins give different results — that is exactly why we test.)"
+      },
+      "objectiveIds": ["sci-magnets-lo1"]
+    },
+    {
+      "order": 3,
+      "period": 1,
+      "title": { "en": "Where is a magnet strongest?" },
+      "durationMinutes": 10,
+      "teacherDoes": {
+        "en": "Spread pins or iron particles on a sheet of paper. Ask the class to predict where most will stick. Roll a bar magnet through them and lift it up slowly so all can see. Most stick at the two ends. Introduce the word “poles”: the two ends where a magnet’s pull is strongest."
+      },
+      "studentsDo": {
+        "en": "Predict, watch, and draw the bar magnet with pins clustered at both ends. Label the ends “poles”."
+      },
+      "sayThis": {
+        "en": "“See — almost nothing in the middle, and a crowd at each end. These ends are called poles. Every magnet has two poles.”"
+      },
+      "boardWork": { "en": "Drawing: bar magnet, pins clustered at both ends. Label: POLE ←→ POLE. “Attraction is strongest at the poles.”" },
+      "checkForUnderstanding": {
+        "en": "Ask: “If you want to pick up a dropped needle, which part of the magnet should you use?” Expected: “An end (a pole).”"
+      },
+      "objectiveIds": ["sci-magnets-lo2"]
+    },
+    {
+      "order": 4,
+      "period": 2,
+      "title": { "en": "A hanging magnet points north–south" },
+      "durationMinutes": 15,
+      "teacherDoes": {
+        "en": "Tie a thread around the middle of a bar magnet so it hangs level. Hang it from a stand away from iron objects (steel almirahs, iron window grills, benches with iron frames). Let it stop moving. Gently turn it and let go — it returns to the same direction. Use the morning sun to find east (stand facing the sun: north is on your left). Mark the end pointing north with chalk as “N” (north-seeking pole) and the other “S”."
+      },
+      "studentsDo": {
+        "en": "In groups, hang their magnet, turn it 2–3 times and observe that it always settles the same way. Draw the classroom with an arrow showing the direction the magnet points."
+      },
+      "sayThis": {
+        "en": "“No matter how many times we turn it, it comes back to point north–south. The end that points north is called the north-seeking pole, or north pole for short.”"
+      },
+      "boardWork": { "en": "A freely hanging magnet always rests in the North–South direction. N = north-seeking pole, S = south-seeking pole." },
+      "checkForUnderstanding": {
+        "en": "Ask: “A traveller is lost in a forest on a cloudy night. How could a magnet on a thread help?” Expected: “Hang it; it shows north–south, so the traveller can find directions.”"
+      },
+      "objectiveIds": ["sci-magnets-lo4"]
+    },
+    {
+      "order": 5,
+      "period": 2,
+      "title": { "en": "Like poles push, unlike poles pull" },
+      "durationMinutes": 15,
+      "teacherDoes": {
+        "en": "Pair up groups so each pair has two marked magnets (N and S known from step 4). Ask them to bring N near N, S near S, then N near S, and feel what happens. Tip: put one magnet on two round pencils so it can roll — it will roll away or towards the other magnet. Collect results on the board."
+      },
+      "studentsDo": {
+        "en": "Try all three combinations, feel the push or pull with their hands, and record: N–N, S–S, N–S."
+      },
+      "sayThis": {
+        "en": "“Same poles push each other away — we call this repulsion. Different poles pull together — attraction. Remember: like poles repel, unlike poles attract.”"
+      },
+      "boardWork": { "en": "N → ← N : repel (push away)   S → ← S : repel   N → ← S : attract (pull together)" },
+      "checkForUnderstanding": {
+        "en": "Hold two magnets with hidden labels so they repel. Ask: “What can you say about the two ends facing each other?” Expected: “They are the same poles — both N or both S.”"
+      },
+      "objectiveIds": ["sci-magnets-lo3"]
+    },
+    {
+      "order": 6,
+      "period": 2,
+      "title": { "en": "The sure test: magnet or plain iron?" },
+      "durationMinutes": 10,
+      "teacherDoes": {
+        "en": "Show an iron nail. Bring the N pole of a magnet near one end — it is attracted. Bring the S pole near the same end — it is also attracted. Now bring the N pole near the N pole of another magnet — it is pushed away. Ask: “Which test tells us for sure that something is a magnet: attraction or repulsion?”"
+      },
+      "studentsDo": {
+        "en": "Repeat with a nail and a magnet in their groups, and write the rule in their notebooks."
+      },
+      "sayThis": {
+        "en": "“Iron is pulled by both poles, so attraction does not prove that something is a magnet. Only a magnet can push another magnet away. Repulsion is the sure test.”"
+      },
+      "boardWork": { "en": "Attraction → could be iron OR a magnet. Repulsion → definitely a magnet." },
+      "objectiveIds": ["sci-magnets-lo3"]
+    },
+    {
+      "order": 7,
+      "period": 3,
+      "title": { "en": "Make a needle compass" },
+      "durationMinutes": 15,
+      "teacherDoes": {
+        "en": "Demonstrate first: place a needle on the table. Hold one pole of a bar magnet at one end of the needle and slide it to the other end. Lift the magnet high, bring it back to the starting end, and slide again in the same direction. Repeat 30–40 times. Test: the needle now picks up a pin. Push the needle through a small piece of cork (or lay it on a leaf) and float it on water in a plastic plate. It slowly turns to point north–south."
+      },
+      "studentsDo": {
+        "en": "Each group magnetises a needle, checks that it can pick up a pin, floats it, and compares its direction with the hanging magnet from step 4."
+      },
+      "sayThis": {
+        "en": "“Always stroke in one direction and lift the magnet away at the end. Going back and forth will not work. You have made a temporary magnet — and a compass!”"
+      },
+      "boardWork": { "en": "Diagram: magnet sliding along needle → arrow showing one direction only, magnet lifted in an arc to return. “Stroke 30–40 times, same direction.”" },
+      "checkForUnderstanding": {
+        "en": "Ask: “Why does our floating needle point the same way as the hanging bar magnet?” Expected: “Both are magnets, and a freely moving magnet rests north–south.”"
+      },
+      "objectiveIds": ["sci-magnets-lo4", "sci-magnets-lo5"]
+    },
+    {
+      "order": 8,
+      "period": 3,
+      "title": { "en": "Does magnetism pass through things?" },
+      "durationMinutes": 10,
+      "teacherDoes": {
+        "en": "Drop a paper clip into a glass or plastic tumbler of water. Ask: “Can I take it out without wetting my hand or touching the water?” Slide a magnet up the outside of the tumbler — the clip follows and comes out at the top. Repeat the “magic paper clip” from the start of the lesson and now explain it."
+      },
+      "studentsDo": {
+        "en": "Test whether the magnet can pull a clip through a notebook page, a cloth, their palm, and a thin wooden ruler. Record which ones work."
+      },
+      "sayThis": {
+        "en": "“The magnet did not touch the clip. Magnetic force works from a distance and through paper, cloth, glass and water.”"
+      },
+      "boardWork": { "en": "Magnetic force acts from a distance and passes through non-magnetic materials (paper, cloth, water, glass, wood)." },
+      "objectiveIds": ["sci-magnets-lo1"]
+    },
+    {
+      "order": 9,
+      "period": 3,
+      "title": { "en": "Looking after magnets" },
+      "durationMinutes": 8,
+      "teacherDoes": {
+        "en": "Explain what weakens a magnet: heating it, hammering it, or dropping it again and again. Show how to store bar magnets: in pairs, side by side with unlike poles next to each other, a piece of wood between them, and two small iron pieces (keepers) across the ends. Add: keep magnets away from mobile phones, ATM/bank cards and compasses."
+      },
+      "studentsDo": {
+        "en": "Pack the class magnets correctly into their box, checking each other’s work."
+      },
+      "boardWork": { "en": "Drawing: N S magnet next to S N magnet, wood strip between, iron keepers across both ends. Do NOT: heat, hammer, drop." },
+      "objectiveIds": ["sci-magnets-lo5"]
+    },
+    {
+      "order": 10,
+      "period": 3,
+      "title": { "en": "Wrap up: quick oral round" },
+      "durationMinutes": 7,
+      "teacherDoes": {
+        "en": "Ask 5–6 quick questions from “Questions to ask” to different students, especially those who were quiet. Revisit the prediction table from Period 1: which predictions changed?"
+      },
+      "studentsDo": { "en": "Answer aloud; correct the prediction column in their notebooks." },
+      "objectiveIds": ["sci-magnets-lo1", "sci-magnets-lo2", "sci-magnets-lo3", "sci-magnets-lo4", "sci-magnets-lo5"]
+    }
+  ],
+  "realLifeExamples": [
+    { "en": "Cupboard and almirah doors, pencil boxes and some bags use small magnets to stay shut." },
+    { "en": "Scrap dealers (kabadiwalas) use magnets to separate iron pieces from other waste." },
+    { "en": "Tailors use a magnet to pick up dropped pins and needles from the floor." },
+    { "en": "Sailors, travellers and soldiers use a compass to find directions when there are no landmarks." },
+    { "en": "Loudspeakers in radios and phones have magnets inside them." }
+  ],
+  "demonstrations": [
+    {
+      "title": { "en": "The magic paper clip" },
+      "materials": [{ "en": "Magnet" }, { "en": "Paper clip" }, { "en": "Notebook or thin cardboard" }],
+      "steps": [
+        { "en": "Place the paper clip on top of the notebook." },
+        { "en": "Hold the magnet underneath, directly below the clip." },
+        { "en": "Move the magnet slowly; the clip follows." }
+      ],
+      "whatHappens": { "en": "The clip moves without being touched, because magnetic force passes through paper." }
+    },
+    {
+      "title": { "en": "Iron from sand" },
+      "materials": [{ "en": "Magnet" }, { "en": "Thin plastic bag" }, { "en": "Dry sand or soil" }],
+      "steps": [
+        { "en": "Wrap the magnet in the plastic bag." },
+        { "en": "Drag it slowly through dry sand." },
+        { "en": "Lift it out over a sheet of paper and pull the bag off the magnet." }
+      ],
+      "whatHappens": {
+        "en": "Tiny black particles stick to the bag and fall onto the paper when the magnet is removed. They contain iron. The bag keeps the magnet clean."
+      }
+    },
+    {
+      "title": { "en": "Clip out of water" },
+      "materials": [{ "en": "Glass or plastic tumbler of water" }, { "en": "Paper clip" }, { "en": "Strong magnet" }],
+      "steps": [
+        { "en": "Drop the clip into the water." },
+        { "en": "Hold the magnet against the outside of the tumbler next to the clip." },
+        { "en": "Slide the magnet slowly up the side to the rim." }
+      ],
+      "whatHappens": { "en": "The clip follows the magnet up and out, showing that magnetic force passes through glass/plastic and water." }
+    },
+    {
+      "title": { "en": "Floating needle compass" },
+      "materials": [{ "en": "Sewing needle" }, { "en": "Bar magnet" }, { "en": "Cork slice or leaf" }, { "en": "Plastic plate with water" }],
+      "steps": [
+        { "en": "Stroke the needle 30–40 times with one pole, always in the same direction, lifting the magnet away each time." },
+        { "en": "Fix the needle on the cork or lay it on the leaf." },
+        { "en": "Float it in the centre of the plate, away from iron objects." }
+      ],
+      "whatHappens": { "en": "The needle turns and settles pointing north–south, like a compass." },
+      "safetyNote": { "en": "Needles are sharp. Hand them out and collect them back yourself." }
+    }
+  ],
+  "questionsToAsk": [
+    {
+      "text": { "en": "Which part of a bar magnet picks up the most pins?" },
+      "level": "recall",
+      "expectedAnswer": { "en": "The two ends, called the poles." }
+    },
+    {
+      "text": { "en": "An iron nail and aluminium foil are both metals. Why does the magnet pull only the nail?" },
+      "level": "understand",
+      "expectedAnswer": { "en": "Magnets attract iron (and a few other materials). Aluminium is a metal but it is not magnetic." }
+    },
+    {
+      "text": { "en": "What happens when you bring the north poles of two magnets close together?" },
+      "level": "recall",
+      "expectedAnswer": { "en": "They push each other away (repel)." }
+    },
+    {
+      "text": { "en": "You dropped a box of pins in sand. How will you collect them quickly?" },
+      "level": "apply",
+      "expectedAnswer": { "en": "Move a magnet through the sand; the iron pins stick to it." }
+    },
+    {
+      "text": { "en": "How can you find out which of two iron bars is a magnet, using another magnet?" },
+      "level": "think",
+      "expectedAnswer": { "en": "Bring one pole of your magnet near each end of the bars. The bar that gets pushed away at one end is the magnet." }
+    },
+    {
+      "text": { "en": "If you break a bar magnet into two pieces, how many poles will each piece have?" },
+      "level": "think",
+      "expectedAnswer": { "en": "Two — every piece becomes a complete magnet with a north and a south pole." }
+    }
+  ],
+  "misconceptionIds": [
+    "sci-magnets-mc1",
+    "sci-magnets-mc2",
+    "sci-magnets-mc3",
+    "sci-magnets-mc4",
+    "sci-magnets-mc5",
+    "sci-magnets-mc6"
+  ],
+  "alternativeMethods": [
+    {
+      "title": { "en": "Pole role-play" },
+      "whenToUse": { "en": "When there are too few magnets, or to revise like/unlike poles in a fun way." },
+      "description": {
+        "en": "Give students cards marked “N” or “S”. Call two students to the front. If their cards match, they must step apart; if different, they step closer and hold hands. Swap cards and repeat with the whole class watching and judging."
+      }
+    },
+    {
+      "title": { "en": "Magnet treasure hunt" },
+      "whenToUse": { "en": "When students finish early, or to make sorting more active." },
+      "description": {
+        "en": "Give each group a magnet and 10 minutes to find 5 magnetic and 5 non-magnetic things in the school yard or classroom (no electrical sockets or devices). Groups report back and the class checks any surprising answers together."
+      }
+    },
+    {
+      "title": { "en": "Teacher-only demonstration" },
+      "whenToUse": { "en": "When there is only one magnet in the school." },
+      "description": {
+        "en": "Do every experiment at the front at a raised height. Call a different student each time to hold the magnet and announce the result, so the class stays involved."
+      }
+    }
+  ],
+  "remedial": [
+    {
+      "forObjectiveId": "sci-magnets-lo1",
+      "strategy": {
+        "en": "Re-do the sorting with only 6 objects: 3 metals that are attracted (nail, clip, pin) and 3 that are not (foil, copper wire, brass). Ask the student to sort and then say the rule aloud in their own words."
+      },
+      "quickActivity": { "en": "“Odd one out”: show iron nail, paper clip, aluminium foil — which is not attracted and why?" }
+    },
+    {
+      "forObjectiveId": "sci-magnets-lo2",
+      "strategy": {
+        "en": "Let the student roll the magnet in pins themselves and count how many stick at each end and in the middle. Counting makes the pattern clear."
+      },
+      "quickActivity": { "en": "Draw a bar magnet and ask the student to mark where the pull is strongest." }
+    },
+    {
+      "forObjectiveId": "sci-magnets-lo3",
+      "strategy": {
+        "en": "Use the pole role-play with the student and one friend, then the real magnets on round pencils. Ask them to predict before every try."
+      },
+      "quickActivity": { "en": "Say pairs aloud (“N and S”, “S and S”) and the student shows thumbs-up for attract, thumbs-down for repel." }
+    },
+    {
+      "forObjectiveId": "sci-magnets-lo4",
+      "strategy": {
+        "en": "Hang the magnet again with the student, turn it three times, and each time ask which wall it points to. Then let them use their needle compass outdoors to point north."
+      },
+      "quickActivity": { "en": "Ask the student to stand facing north using the hanging magnet, then name what is behind them." }
+    },
+    {
+      "forObjectiveId": "sci-magnets-lo5",
+      "strategy": {
+        "en": "Make a needle magnet together, step by step, saying the rule aloud: “one pole, one direction, lift away, 30 times.” Then ask the student to pack two magnets correctly for storage."
+      },
+      "quickActivity": { "en": "Show a wrongly stored pair (N next to N) and ask the student to fix it." }
+    }
+  ],
+  "safetyNotes": [
+    { "en": "Needles and pins are sharp: hand them out yourself and count them back at the end." },
+    { "en": "Small magnets must never be put in the mouth. Swallowing magnets is dangerous — tell an adult immediately if it happens." },
+    { "en": "Keep magnets away from mobile phones, ATM/bank cards and compasses." }
+  ]
+}

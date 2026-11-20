@@ -1,0 +1,345 @@
+{
+  "questions": [
+    {
+      "id": "sci-magnets-q01",
+      "type": "mcq",
+      "prompt": { "en": "Which of these will a magnet attract?" },
+      "options": [
+        { "id": "sci-magnets-q01-a", "text": { "en": "Aluminium foil" }, "misconceptionId": "sci-magnets-mc1" },
+        { "id": "sci-magnets-q01-b", "text": { "en": "An iron nail" } },
+        { "id": "sci-magnets-q01-c", "text": { "en": "A copper wire" }, "misconceptionId": "sci-magnets-mc1" },
+        { "id": "sci-magnets-q01-d", "text": { "en": "A plastic ruler" } }
+      ],
+      "correctOptionId": "sci-magnets-q01-b",
+      "explanation": { "en": "Magnets attract iron. Aluminium and copper are metals but are not magnetic; plastic is not a metal." },
+      "difficulty": "easy",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo1"]
+    },
+    {
+      "id": "sci-magnets-q02",
+      "type": "mcq",
+      "prompt": { "en": "Which of these will a magnet NOT attract?" },
+      "options": [
+        { "id": "sci-magnets-q02-a", "text": { "en": "A steel paper clip" } },
+        { "id": "sci-magnets-q02-b", "text": { "en": "A safety pin" } },
+        { "id": "sci-magnets-q02-c", "text": { "en": "A piece of iron wire" } },
+        { "id": "sci-magnets-q02-d", "text": { "en": "A wooden pencil" } }
+      ],
+      "correctOptionId": "sci-magnets-q02-d",
+      "explanation": { "en": "Wood is non-magnetic. Paper clips, safety pins and iron wire contain iron, so they are attracted." },
+      "difficulty": "easy",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo1"]
+    },
+    {
+      "id": "sci-magnets-q03",
+      "type": "true_false",
+      "prompt": { "en": "True or false: a magnet attracts all metals." },
+      "options": [
+        { "id": "sci-magnets-q03-t", "text": { "en": "True" }, "misconceptionId": "sci-magnets-mc1" },
+        { "id": "sci-magnets-q03-f", "text": { "en": "False" } }
+      ],
+      "correctOptionId": "sci-magnets-q03-f",
+      "explanation": { "en": "False. Many metals such as aluminium, copper and brass are not attracted by a magnet." },
+      "difficulty": "easy",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo1"]
+    },
+    {
+      "id": "sci-magnets-q04",
+      "type": "mcq",
+      "prompt": { "en": "A bar magnet is rolled in a heap of pins. Where will most pins stick?" },
+      "options": [
+        { "id": "sci-magnets-q04-a", "text": { "en": "In the middle" }, "misconceptionId": "sci-magnets-mc3" },
+        { "id": "sci-magnets-q04-b", "text": { "en": "Near both ends" } },
+        { "id": "sci-magnets-q04-c", "text": { "en": "Only near the north pole" } },
+        { "id": "sci-magnets-q04-d", "text": { "en": "Equally all along the magnet" }, "misconceptionId": "sci-magnets-mc3" }
+      ],
+      "correctOptionId": "sci-magnets-q04-b",
+      "explanation": { "en": "A magnet's attraction is strongest at its two poles, which are near the ends. Both poles attract pins equally well." },
+      "difficulty": "medium",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo2"]
+    },
+    {
+      "id": "sci-magnets-q05",
+      "type": "mcq",
+      "prompt": { "en": "What happens when the north poles of two magnets are brought close together?" },
+      "options": [
+        { "id": "sci-magnets-q05-a", "text": { "en": "They attract each other" } },
+        { "id": "sci-magnets-q05-b", "text": { "en": "They repel (push away) each other" } },
+        { "id": "sci-magnets-q05-c", "text": { "en": "Nothing happens" } },
+        { "id": "sci-magnets-q05-d", "text": { "en": "Both become south poles" } }
+      ],
+      "correctOptionId": "sci-magnets-q05-b",
+      "explanation": { "en": "Like poles repel. Two north poles push each other away." },
+      "difficulty": "easy",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo3"]
+    },
+    {
+      "id": "sci-magnets-q06",
+      "type": "mcq",
+      "prompt": { "en": "Which pair of poles will attract each other?" },
+      "options": [
+        { "id": "sci-magnets-q06-a", "text": { "en": "North and north" } },
+        { "id": "sci-magnets-q06-b", "text": { "en": "South and south" } },
+        { "id": "sci-magnets-q06-c", "text": { "en": "North and south" } },
+        { "id": "sci-magnets-q06-d", "text": { "en": "None of these" } }
+      ],
+      "correctOptionId": "sci-magnets-q06-c",
+      "explanation": { "en": "Unlike poles attract: a north pole and a south pole pull towards each other." },
+      "difficulty": "medium",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo3"]
+    },
+    {
+      "id": "sci-magnets-q07",
+      "type": "mcq",
+      "prompt": { "en": "A bar magnet hangs freely from a thread tied at its middle. When it stops moving, it points:" },
+      "options": [
+        { "id": "sci-magnets-q07-a", "text": { "en": "East–west" } },
+        { "id": "sci-magnets-q07-b", "text": { "en": "North–south" } },
+        { "id": "sci-magnets-q07-c", "text": { "en": "In a different direction each time" } },
+        { "id": "sci-magnets-q07-d", "text": { "en": "Straight up and down" } }
+      ],
+      "correctOptionId": "sci-magnets-q07-b",
+      "explanation": { "en": "A freely suspended magnet always comes to rest in the north–south direction. This is how a compass works." },
+      "difficulty": "medium",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo4"]
+    },
+    {
+      "id": "sci-magnets-q08",
+      "type": "short_answer",
+      "prompt": { "en": "What do we call the end of a freely hanging magnet that points towards the north?" },
+      "modelAnswer": { "en": "The north-seeking pole, or north pole (N)." },
+      "explanation": { "en": "The end of a freely suspended magnet that points north is called its north-seeking pole, usually just ‘north pole’." },
+      "difficulty": "medium",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo4"]
+    },
+    {
+      "id": "sci-magnets-q09",
+      "type": "mcq",
+      "prompt": {
+        "en": "Two iron bars look exactly the same. One of them is a magnet. Using another magnet, how can you find out which bar is the magnet?"
+      },
+      "options": [
+        { "id": "sci-magnets-q09-a", "text": { "en": "See which bar your magnet attracts" }, "misconceptionId": "sci-magnets-mc6" },
+        { "id": "sci-magnets-q09-b", "text": { "en": "See which bar is pushed away by one pole of your magnet" } },
+        { "id": "sci-magnets-q09-c", "text": { "en": "See which bar is heavier" } },
+        { "id": "sci-magnets-q09-d", "text": { "en": "See which bar is shinier" } }
+      ],
+      "correctOptionId": "sci-magnets-q09-b",
+      "explanation": {
+        "en": "Your magnet attracts both bars, because plain iron is attracted too. Only a magnet can be repelled, so repulsion is the sure test."
+      },
+      "difficulty": "hard",
+      "marks": 2,
+      "objectiveIds": ["sci-magnets-lo3"]
+    },
+    {
+      "id": "sci-magnets-q10",
+      "type": "true_false",
+      "prompt": { "en": "True or false: if a bar magnet breaks into two pieces, one piece has only a north pole and the other has only a south pole." },
+      "options": [
+        { "id": "sci-magnets-q10-t", "text": { "en": "True" }, "misconceptionId": "sci-magnets-mc5" },
+        { "id": "sci-magnets-q10-f", "text": { "en": "False" } }
+      ],
+      "correctOptionId": "sci-magnets-q10-f",
+      "explanation": { "en": "False. Each piece becomes a complete magnet with both a north and a south pole. A magnet always has two poles." },
+      "difficulty": "medium",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo2"]
+    },
+    {
+      "id": "sci-magnets-q11",
+      "type": "mcq",
+      "prompt": { "en": "What is the best way to store two bar magnets?" },
+      "options": [
+        { "id": "sci-magnets-q11-a", "text": { "en": "Side by side with north next to north" } },
+        {
+          "id": "sci-magnets-q11-b",
+          "text": { "en": "Side by side with unlike poles together, a piece of wood between them and iron keepers across the ends" }
+        },
+        { "id": "sci-magnets-q11-c", "text": { "en": "Loose in a bag with a mobile phone" } },
+        { "id": "sci-magnets-q11-d", "text": { "en": "Near the kitchen stove so they stay dry" } }
+      ],
+      "correctOptionId": "sci-magnets-q11-b",
+      "explanation": {
+        "en": "Pairing unlike poles with keepers across the ends helps magnets keep their strength. Heat weakens magnets, and magnets can damage phones and cards."
+      },
+      "difficulty": "medium",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo5"]
+    },
+    {
+      "id": "sci-magnets-q12",
+      "type": "mcq",
+      "prompt": { "en": "Which of these can make a magnet weaker?" },
+      "options": [
+        { "id": "sci-magnets-q12-a", "text": { "en": "Keeping iron keepers across its ends" } },
+        { "id": "sci-magnets-q12-b", "text": { "en": "Heating it, hammering it or dropping it again and again" } },
+        { "id": "sci-magnets-q12-c", "text": { "en": "Keeping it in a wooden box" } },
+        { "id": "sci-magnets-q12-d", "text": { "en": "Wrapping it in a cloth" } }
+      ],
+      "correctOptionId": "sci-magnets-q12-b",
+      "explanation": { "en": "Heating, hammering and repeated dropping weaken a magnet. Keepers help it stay strong." },
+      "difficulty": "medium",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo5"]
+    },
+    {
+      "id": "sci-magnets-q13",
+      "type": "short_answer",
+      "prompt": { "en": "Describe how you can turn an iron needle into a magnet." },
+      "modelAnswer": {
+        "en": "Place the needle on a table. Slide one pole of a bar magnet from one end of the needle to the other. Lift the magnet away, bring it back to the starting end and repeat in the same direction about 30–40 times."
+      },
+      "explanation": {
+        "en": "Stroking in only one direction with one pole makes the needle a temporary magnet. Stroking back and forth does not work. Award 1 mark for ‘stroke with one pole’ and 1 mark for ‘same direction, many times’."
+      },
+      "difficulty": "hard",
+      "marks": 2,
+      "objectiveIds": ["sci-magnets-lo5", "sci-magnets-lo4"]
+    },
+    {
+      "id": "sci-magnets-q14",
+      "type": "mcq",
+      "prompt": {
+        "en": "A paper clip is at the bottom of a glass of water. Can a strong magnet held against the outside of the glass move the clip?"
+      },
+      "options": [
+        { "id": "sci-magnets-q14-a", "text": { "en": "No, a magnet must touch the clip to pull it" }, "misconceptionId": "sci-magnets-mc4" },
+        { "id": "sci-magnets-q14-b", "text": { "en": "Yes, magnetic force acts through glass and water" } },
+        { "id": "sci-magnets-q14-c", "text": { "en": "Only if the water is removed first" }, "misconceptionId": "sci-magnets-mc4" },
+        { "id": "sci-magnets-q14-d", "text": { "en": "Only if the glass is made of metal" } }
+      ],
+      "correctOptionId": "sci-magnets-q14-b",
+      "explanation": { "en": "Magnetic force acts from a distance and passes through non-magnetic materials such as glass and water." },
+      "difficulty": "medium",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo1"]
+    },
+    {
+      "id": "sci-magnets-q15",
+      "type": "oral",
+      "prompt": { "en": "Name three things in this classroom that a magnet will attract, and three it will not." },
+      "modelAnswer": {
+        "en": "Attracted: e.g. iron nail, paper clip, iron window grill, steel bench frame. Not attracted: e.g. book, wooden desk top, plastic bottle, eraser, glass."
+      },
+      "explanation": { "en": "Anything containing iron is attracted; wood, paper, plastic, glass and rubber are not. Accept any items that the class has tested." },
+      "difficulty": "easy",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo1"]
+    },
+    {
+      "id": "sci-magnets-q16",
+      "type": "mcq",
+      "prompt": {
+        "en": "A small magnet lifts a chain of 12 paper clips. A big magnet lifts only 5. Which magnet is stronger?"
+      },
+      "options": [
+        { "id": "sci-magnets-q16-a", "text": { "en": "The big one, because it is bigger" }, "misconceptionId": "sci-magnets-mc2" },
+        { "id": "sci-magnets-q16-b", "text": { "en": "The small one, because it lifted more clips" } },
+        { "id": "sci-magnets-q16-c", "text": { "en": "Both are equally strong" } },
+        { "id": "sci-magnets-q16-d", "text": { "en": "We cannot compare magnets" } }
+      ],
+      "correctOptionId": "sci-magnets-q16-b",
+      "explanation": { "en": "Strength is shown by what a magnet can do, not by its size. The small magnet lifted more, so it is stronger." },
+      "difficulty": "medium",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo2"]
+    },
+    {
+      "id": "sci-magnets-q17",
+      "type": "oral",
+      "prompt": { "en": "How can a traveller find directions on a cloudy night without a phone?" },
+      "modelAnswer": { "en": "By using a compass (or a freely hanging magnet), which points north–south." },
+      "explanation": { "en": "A compass needle is a small magnet that rests north–south, so it shows directions even without the sun or stars." },
+      "difficulty": "easy",
+      "marks": 1,
+      "objectiveIds": ["sci-magnets-lo4"]
+    },
+    {
+      "id": "sci-magnets-q18",
+      "type": "short_answer",
+      "prompt": { "en": "You dropped a box of pins in sand. How can you collect them quickly? Explain why your method works." },
+      "modelAnswer": { "en": "Move a magnet through the sand. The pins contain iron, so they are attracted and stick to the magnet; sand grains do not." },
+      "explanation": { "en": "Award 1 mark for ‘use a magnet’ and 1 mark for the reason (pins are made of iron/magnetic material)." },
+      "difficulty": "hard",
+      "marks": 2,
+      "objectiveIds": ["sci-magnets-lo1"]
+    }
+  ],
+  "assessments": [
+    {
+      "id": "sci-magnets-as1",
+      "kind": "oral_quiz",
+      "title": { "en": "Quick oral quiz", "hi": "त्वरित मौखिक प्रश्नोत्तरी" },
+      "instructions": {
+        "en": "Read each question aloud. Ask for a show of hands or call on individual students. Reveal the answer after each question."
+      },
+      "timeMinutes": 10,
+      "questionIds": ["sci-magnets-q15", "sci-magnets-q03", "sci-magnets-q05", "sci-magnets-q07", "sci-magnets-q10", "sci-magnets-q17"]
+    },
+    {
+      "id": "sci-magnets-as2",
+      "kind": "interactive_quiz",
+      "title": { "en": "Class quiz on the device", "hi": "डिवाइस पर कक्षा प्रश्नोत्तरी" },
+      "instructions": { "en": "Show each question on the phone or projector. Students answer by raising cards A–D or taking turns on the device." },
+      "timeMinutes": 15,
+      "questionIds": [
+        "sci-magnets-q01",
+        "sci-magnets-q02",
+        "sci-magnets-q04",
+        "sci-magnets-q05",
+        "sci-magnets-q06",
+        "sci-magnets-q07",
+        "sci-magnets-q09",
+        "sci-magnets-q14",
+        "sci-magnets-q16",
+        "sci-magnets-q11"
+      ]
+    },
+    {
+      "id": "sci-magnets-as3",
+      "kind": "topic_test",
+      "title": { "en": "Topic test: Exploring Magnets", "hi": "विषय परीक्षा: चुंबकों की खोज" },
+      "instructions": { "en": "Written test. Students write answers in their notebooks." },
+      "timeMinutes": 30,
+      "questionIds": [
+        "sci-magnets-q01",
+        "sci-magnets-q03",
+        "sci-magnets-q04",
+        "sci-magnets-q06",
+        "sci-magnets-q08",
+        "sci-magnets-q09",
+        "sci-magnets-q10",
+        "sci-magnets-q12",
+        "sci-magnets-q13",
+        "sci-magnets-q14",
+        "sci-magnets-q16",
+        "sci-magnets-q18"
+      ]
+    },
+    {
+      "id": "sci-magnets-as4",
+      "kind": "worksheet",
+      "title": { "en": "Practice worksheet", "hi": "अभ्यास कार्यपत्रक" },
+      "instructions": { "en": "Copy on the board or print. Students can complete it in class or at home." },
+      "questionIds": [
+        "sci-magnets-q02",
+        "sci-magnets-q03",
+        "sci-magnets-q06",
+        "sci-magnets-q08",
+        "sci-magnets-q11",
+        "sci-magnets-q12",
+        "sci-magnets-q13",
+        "sci-magnets-q18"
+      ]
+    }
+  ]
+}

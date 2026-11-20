@@ -50,7 +50,8 @@
     "lint": "expo lint",
     "test": "jest",
     "test:watch": "jest --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "validate-content": "jest src/content"
   },
   "private": true,
   "jest": {

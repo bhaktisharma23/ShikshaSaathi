@@ -1,0 +1,10 @@
+{
+  "grade": 6,
+  "subjects": [
+    { "id": "maths", "order": 1, "title": { "en": "Mathematics", "hi": "गणित" }, "topicIdPrefix": "math-" },
+    { "id": "science", "order": 2, "title": { "en": "Science", "hi": "विज्ञान" }, "topicIdPrefix": "sci-" },
+    { "id": "english", "order": 3, "title": { "en": "English", "hi": "अंग्रेज़ी" }, "topicIdPrefix": "eng-" },
+    { "id": "hindi", "order": 4, "title": { "en": "Hindi", "hi": "हिन्दी" }, "topicIdPrefix": "hin-" },
+    { "id": "social-science", "order": 5, "title": { "en": "Social Science", "hi": "सामाजिक विज्ञान" }, "topicIdPrefix": "sst-" }
+  ]
+}

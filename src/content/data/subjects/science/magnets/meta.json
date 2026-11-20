@@ -1,0 +1,79 @@
+{
+  "id": "sci-magnets",
+  "subjectId": "science",
+  "grade": 6,
+  "order": 1,
+  "title": { "en": "Exploring Magnets", "hi": "चुंबकों की खोज" },
+  "summary": {
+    "en": "Students test which materials a magnet attracts, find its poles, see how like and unlike poles behave, and make a simple compass from a needle.",
+    "hi": "विद्यार्थी जाँचते हैं कि चुंबक किन पदार्थों को आकर्षित करता है, उसके ध्रुव खोजते हैं, समान और असमान ध्रुवों का व्यवहार देखते हैं, और सुई से एक साधारण कंपास बनाते हैं।"
+  },
+  "contentVersion": "0.1.0",
+  "status": "draft",
+  "isSample": true,
+  "curriculum": {
+    "framework": "CBSE",
+    "source": "NCERT Class 6 Science textbook (current edition) — TO BE VERIFIED",
+    "chapterRef": "",
+    "learningOutcomeRefs": [],
+    "notes": "Provisional topic. Confirm chapter title, number and learning outcomes against the current NCERT/CBSE documents before changing status."
+  },
+  "objectives": [
+    {
+      "id": "sci-magnets-lo1",
+      "text": {
+        "en": "Sort materials into magnetic and non-magnetic by testing them, and explain that not all metals are attracted by a magnet.",
+        "hi": "पदार्थों को जाँचकर चुंबकीय और अचुंबकीय में बाँटना, और समझाना कि सभी धातुएँ चुंबक से आकर्षित नहीं होतीं।"
+      },
+      "bloomLevel": "apply"
+    },
+    {
+      "id": "sci-magnets-lo2",
+      "text": {
+        "en": "Show that a magnet's attraction is strongest near its ends (poles), and that every magnet has two poles.",
+        "hi": "दिखाना कि चुंबक का आकर्षण उसके सिरों (ध्रुवों) के पास सबसे अधिक होता है, और हर चुंबक के दो ध्रुव होते हैं।"
+      },
+      "bloomLevel": "understand"
+    },
+    {
+      "id": "sci-magnets-lo3",
+      "text": {
+        "en": "Predict and explain that like poles repel and unlike poles attract, and use repulsion to tell a magnet from a plain piece of iron.",
+        "hi": "अनुमान लगाकर समझाना कि समान ध्रुव एक-दूसरे को दूर धकेलते हैं और असमान ध्रुव आकर्षित करते हैं, तथा प्रतिकर्षण से चुंबक और साधारण लोहे में अंतर पहचानना।"
+      },
+      "bloomLevel": "analyse"
+    },
+    {
+      "id": "sci-magnets-lo4",
+      "text": {
+        "en": "Describe how a freely hanging magnet always settles in the north–south direction and how a compass uses this to find directions.",
+        "hi": "बताना कि स्वतंत्र रूप से लटका चुंबक हमेशा उत्तर–दक्षिण दिशा में रुकता है, और कंपास इसी से दिशा कैसे बताता है।"
+      },
+      "bloomLevel": "understand"
+    },
+    {
+      "id": "sci-magnets-lo5",
+      "text": {
+        "en": "Make a temporary magnet from an iron needle, and state how to store magnets so they do not become weak.",
+        "hi": "लोहे की सुई से अस्थायी चुंबक बनाना, और बताना कि चुंबकों को कैसे रखें ताकि वे कमज़ोर न हों।"
+      },
+      "bloomLevel": "apply"
+    }
+  ],
+  "prerequisites": [
+    {
+      "en": "Can tell common materials apart: metal, wood, plastic, glass, rubber, paper.",
+      "hi": "सामान्य पदार्थों में अंतर कर सकते हैं: धातु, लकड़ी, प्लास्टिक, काँच, रबर, कागज़।"
+    },
+    {
+      "en": "Know the four main directions (north, south, east, west) and that the sun rises in the east.",
+      "hi": "चार मुख्य दिशाएँ (उत्तर, दक्षिण, पूर्व, पश्चिम) जानते हैं और यह कि सूर्य पूर्व में उगता है।"
+    },
+    {
+      "en": "Understand a push and a pull as forces.",
+      "hi": "धक्का और खिंचाव को बल के रूप में समझते हैं।"
+    }
+  ],
+  "suggestedDurationMinutes": 120,
+  "periods": 3
+}
